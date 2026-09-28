@@ -9,6 +9,7 @@ import { Hero } from '@/sections/Hero';
 import { HowToBuy } from '@/sections/HowToBuy';
 import { Rabby } from '@/sections/Rabby';
 import { Story } from '@/sections/Story';
+import { ScrollTop } from '@/components/ui/ScrollTop';
 import { TokenInfo } from '@/sections/TokenInfo';
 import { Transformation } from '@/sections/Transformation';
 
@@ -16,6 +17,7 @@ export default function App() {
   return (
     <>
       <Navbar />
+      <ScrollTop />
       <main>
         <Hero />
         <Marquee />
