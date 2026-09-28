@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #fbf3e2; --bg2: #f3e4c2; --ink: #2a1a10; --mute: #6b5545;
+  --gold: #d99a1e; --green: #1f7a4d; --card: #fffaf0; --line: #e2cfa3;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1c130d; --bg2: #2a1d13; --ink: #f7ead2; --mute: #c2ad92; --card: #251a11; --line: #4a3623; }
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(72px + env(safe-area-inset-top, 0px)); overflow-x: hidden; }
+  body { @apply m-0 overflow-x-hidden bg-bg font-body text-[17px] leading-[1.6] text-ink; }
+  :focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before { animation: none !important; transition: none !important; }
+}
